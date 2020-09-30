@@ -1,0 +1,11 @@
+.container{
+    display:flex ;
+    flex-direction: row;
+    padding: 20px;
+    text-align: center;
+    margin-left: 42vw;
+}
+
+h1 {
+    text-align: center;
+}

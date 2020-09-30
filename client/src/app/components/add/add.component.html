@@ -1,0 +1,31 @@
+<h1> Add a new task : </h1>
+<div class="container">
+    <form [formGroup]="formAdd" (ngSubmit)="sub()">
+        <mat-form-field appearance="fill" >
+            <mat-label>Task</mat-label>
+            <input matInput formControlName="descriptionTask">
+        </mat-form-field>
+        <br>
+     
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <mat-select formControlName="m_id">
+                <mat-option *ngFor="let m of members" [value]="m.memberId">{{m.nickname}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br />
+        <input type="submit" value="ADD" />
+    </form>
+
+
+</div>
+
+<div style="text-align: center;">
+    <a mat-raised-button routerLink="/"> To the Home page </a>
+</div>
+
+<br />
+<br />
+
+<!-- 
+{{formAdd.value | json}}   -->
